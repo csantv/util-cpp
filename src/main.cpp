@@ -1,14 +1,11 @@
-#include "sample.hpp"
+#include "util.hpp"
 
 #include <iostream>
 
-void say_hello()
-{
-    std::cout << "Hello, World!\n";
-}
-
 auto main() -> int
 {
-    say_hello();
+    std::string str = "hola que hace";
+    const auto vec = cst::str_split(str);
+    std::cout << vec[0] << '\n';
     return 0;
 }
